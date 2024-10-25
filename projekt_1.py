@@ -54,7 +54,7 @@ while True:   # nekonečná smyčka kvůli možnosti ukončit program v případ
         exit()
 
     # kontrola hesla sice nebyla v zadání, ale asi je to přirozená záležitost (pokud nemá být, lze zakomentovat příslušný elif)
-    elif username in reg_uzivatele.keys() and password not in reg_uzivatele.values():
+    elif username in reg_uzivatele.keys() and password != reg_uzivatele[username]:
         print("Nesouhlasí heslo. Ukončuji program.")
         exit()
     
